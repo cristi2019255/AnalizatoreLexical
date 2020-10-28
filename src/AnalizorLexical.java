@@ -31,13 +31,13 @@ public class AnalizorLexical {
 
     public static void main(String[] args) {
 
-        System.out.println("Analizator is running");
-        File file = new File("C:\\Users\\crm0236\\Desktop\\AnalizatorLexical\\src\\program.txt");
+        System.out.println("Analizator is running...");
+        File file = new File("src/program.txt");
         int t=0; //number of line
         int i=0;
         try {
             BufferedReader reader=new BufferedReader(new FileReader(file));
-            FileWriter writer = new FileWriter("C:\\Users\\crm0236\\Desktop\\AnalizatorLexical\\src\\out.txt");
+            FileWriter writer = new FileWriter("src/out.txt");
             boolean hasErrors=false;
             String line;
             ArrayList<String> atoms;
@@ -81,8 +81,8 @@ public class AnalizorLexical {
             //write in an output file
             if (!hasErrors){
                  for (i=0;i< FIP.size();i++){
-                    System.out.println(FIP.get(i));
-                    drawLine(20);
+                    //System.out.println(FIP.get(i));
+                    //drawLine(20);
                     writer.write(FIP.get(i)+"\n");
                 }
                  for (i=0;i<20;i++)
@@ -91,10 +91,11 @@ public class AnalizorLexical {
                 Iterator<String> iterator1=TS.keySet().iterator();
                 while ( iterator1.hasNext()){
                     String key=iterator1.next();
-                    System.out.println(key+"||"+TS.get(key));
-                    drawLine(20);
+                    //System.out.println(key+"||"+TS.get(key));
+                    //drawLine(20);
                     writer.write(key+"||"+TS.get(key)+"\n");
                 }
+                System.out.println("Done without errors!");
             }
             writer.close();
 
