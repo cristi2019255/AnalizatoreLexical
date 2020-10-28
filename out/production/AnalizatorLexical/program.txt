@@ -1,0 +1,19 @@
+start{
+    sirDeNumere[10]:number;
+    number i=0.0;
+	while (i<10){
+	    read(sirDeNumere[i]);
+		sirDeNumere[i]=i;
+		i=i+1;
+	}
+	number max = sirDeNumere[0];
+	while(i<10) {
+		if(sirDeNumere[i]>max){
+		 	max=sirDeNumere[i];
+		}
+	}
+	if(max>0){
+	    print("MaximFromArray Is");
+	    print(max);
+	}
+}CiaoCacao
